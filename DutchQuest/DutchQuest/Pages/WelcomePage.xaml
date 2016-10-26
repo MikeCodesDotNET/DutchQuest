@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DutchQuest.Pages.WelcomePage">
+  <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+    <Image Source="Windmill.png"/>
+    <Label Text="Start learning Dutch today" HorizontalOptions="Center" TextColor="{Binding LabelColor}"></Label>
+  </StackLayout>
+</ContentPage>

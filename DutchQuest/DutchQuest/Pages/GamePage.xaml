@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DutchQuest.Pages.GamePage"
+             BackgroundColor="#f7f7f7">
+            <StackLayout Padding="10"
+                         VerticalOptions="FillAndExpand">
+              
+                  <Label Text="{Binding DutchWord}" 
+                      FontSize="72"
+                      Margin="10" 
+                      HorizontalTextAlignment="Center" 
+                      VerticalTextAlignment="Center" 
+                      TextColor="#464646"
+                      IsVisible="{Binding TextVisible}">
+                  </Label>
+              
+                  <Image VerticalOptions="FillAndExpand" 
+                          Source="{Binding Photo}" 
+                          Aspect="AspectFill" 
+                          IsVisible="{Binding ImageVisible}">
+                  </Image>
+              
+                  <StackLayout VerticalOptions="End">
+                      <Button Text="Next Word"
+                               BackgroundColor="#15a9fe"
+                               TextColor="#f7f7f7"
+                               Command="{Binding SetNextWordCommand}"
+                               IsVisible="{Binding NextWordIsVisible}">
+                      </Button>
+              
+                      <Button Text="Snap Photo"
+                              BackgroundColor="#50d2c2"
+                              TextColor="#f7f7f7"
+                              Command="{Binding TakePhotoCommand}"
+                              IsVisible="{Binding SnapPhotoIsVisible}">
+                      </Button>
+                  </StackLayout>
+              </StackLayout>
+</ContentPage>
